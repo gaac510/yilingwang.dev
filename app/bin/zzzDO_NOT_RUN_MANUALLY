@@ -1,0 +1,40 @@
+#!/usr/bin/env bash
+
+# This script is intended for docker-compose to run on network startup and
+# should not be run manually!
+
+printf '
+
+================================
+Verifying module completeness...
+This may take some time...
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+'
+
+npm install
+
+printf '
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Verification is complete.
+================================
+
+'
+
+# printf '
+
+# ======================================================
+# Regenerating Prisma client...
+# You may get errors if no model has been defined yet...
+# >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+# '
+
+# npx prisma generate
+
+# printf '
+# <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+# Regeneration done.
+# ======================================================
+
+# '
+
+npm run dev

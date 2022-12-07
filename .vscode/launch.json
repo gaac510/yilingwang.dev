@@ -1,0 +1,16 @@
+// Launch configs ref: https://go.microsoft.com/fwlink/?linkid=830387
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      // Debugger config
+      "type": "node",
+      "request": "attach",
+      "name": "Attached to remote",
+      "address": "localhost",
+      "port": 9229,
+      "localRoot": "${workspaceFolder}/app",
+      "remoteRoot": "/usr/src/app"
+    }
+  ]
+}

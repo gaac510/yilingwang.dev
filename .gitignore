@@ -1,3 +1,14 @@
+# dotenv environment variables file
+.env
+
+# Directories to which the dev database containers' bind volumes are mapped.
+/db-postgres
+
+
+# The above are definitely wanted ignores for this project.
+################################################################################
+# The below are ignores from GitHub's "Node" .gitignore template.
+
 # Logs
 logs
 *.log
@@ -67,10 +78,6 @@ typings/
 
 # Yarn Integrity file
 .yarn-integrity
-
-# dotenv environment variables file
-.env
-.env.test
 
 # parcel-bundler cache (https://parceljs.org/)
 .cache
