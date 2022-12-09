@@ -1,0 +1,8 @@
+{
+    "eslint.workingDirectories": [
+        // This gets rid of the "next/babel" module not found error in *.js
+        // files, which has to do with a monorepo-ish project setup.
+        // See https://stackoverflow.com/a/68838570
+        "./app"
+    ]
+}
