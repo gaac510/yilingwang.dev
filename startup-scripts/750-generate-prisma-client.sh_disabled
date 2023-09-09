@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+printf '
+======================================================
+Regenerating Prisma client...
+You may get errors if no model has been defined yet...
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+'
+
+npx prisma generate
+
+printf '
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Regeneration done.
+======================================================
