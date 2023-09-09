@@ -1,33 +1,41 @@
-// Launch configs ref: https://code.visualstudio.com/docs/nodejs/nodejs-debugging#_launch-configuration
+// Launch configs ref:
+// https://code.visualstudio.com/docs/nodejs/nodejs-debugging#_launch-configuration
 {
   "version": "0.2.0",
   "configurations": [
-    // Debugger config.  
-    // See (1): https://code.visualstudio.com/docs/nodejs/nodejs-debugging#_remote-debugging
-    // Also see: https://code.visualstudio.com/docs/containers/docker-compose#_nodejs
+    // # Debugger config
+    // See:
+    // - [1] https://code.visualstudio.com/docs/nodejs/nodejs-debugging#_remote-debugging
+    // - https://code.visualstudio.com/docs/containers/docker-compose#_nodejs
     {
       "type": "node",
       "request": "attach",
       "name": "Attached to remote",
+
       // Requires that Node inspector is running and listens for debugging
       // clients at an address and port in the container reacheable through the
-      // below host address and port.  
-      // See: https://nodejs.org/en/docs/guides/debugging-getting-started/#enable-inspector
+      // below host address and port.
+      // See:
+      // - https://nodejs.org/en/docs/guides/debugging-getting-started/#enable-inspector
+      //
       // If the `--inspect` switch cannot be directly passed to the dev server
       // startup script, such as starting via `next dev`, the switch can be
-      // passed via the `NODE_OPTIONS` environment variable, like so:  
-      // `NODE_OPTIONS='--inspect=0.0.0.0:9229' next dev`.  
+      // passed via the `NODE_OPTIONS` environment variable, like so:
+      // `NODE_OPTIONS='--inspect=0.0.0.0:9229' next dev`.
       // Note that even though Node's docs caution that the inspector should not
       // be bound to a public IP includding 0.0.0.0, this is necessary if the
-      // dev server is running inside a container.  
-      // See: https://nodejs.org/dist/latest-v18.x/docs/api/cli.html#node_optionsoptions
-      // Also see: https://nodejs.org/dist/latest-v18.x/docs/api/cli.html#--inspecthostport
+      // dev server is running inside a container.
+      // See:
+      // - https://nodejs.org/dist/latest-v18.x/docs/api/cli.html#node_optionsoptions
+      // - https://nodejs.org/dist/latest-v18.x/docs/api/cli.html#--inspecthostport
       "address": "localhost",
       "port": 9229,
+
       // Specifying `localRoot` and `remoteRoot` sets up a mapping between local
       // source code and remote source code, which allows editing of code while
-      // debugging.  
-      // See link (1) above.
+      // debugging.
+      // See:
+      // - [1] above
       "localRoot": "${workspaceFolder}/app",
       "remoteRoot": "/usr/src/app"
     }

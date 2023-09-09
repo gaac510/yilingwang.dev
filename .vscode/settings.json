@@ -1,11 +1,26 @@
 {
-    // "eslint.workingDirectories": [
-    //     // This gets rid of the "next/babel" module not found error in *.js
-    //     // files, which has to do with a monorepo-ish project setup.
-    //     // See https://stackoverflow.com/a/68838570
-    //     "./webapp"
-    // ]
-    "editor.rulers": [
-        80
-    ],
+  // ESLint
+  "eslint.workingDirectories": [
+    // This gets rid of the "next/babel" module not found error in *.js
+    // files, which happens to projects with a monorepo-ish structure.
+    // See:
+    // - https://github.com/Microsoft/vscode-eslint#mono-repository-setup
+    // - https://stackoverflow.com/a/68838570
+    "webapp"
+  ],
+
+  // Formatting
+  "editor.rulers": [80],
+  "editor.formatOnSave": true,
+  "editor.formatOnSaveMode": "modificationsIfAvailable",
+
+  // Tailwind
+  // See:
+  // - https://github.com/tailwindlabs/tailwindcss-intellisense#recommended-vs-code-settings
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+  "editor.quickSuggestions": {
+    "strings": "on"
+  }
 }

@@ -3,13 +3,22 @@
 
 {
   "extends": [
+    "eslint:recommended",
     "next/core-web-vitals",
 
-    // Make ESLint and Prettier play nice with each other. See:
-    // https://prettier.io/docs/en/install#eslint-and-other-linters
+    // Make ESLint and Prettier play nice with each other.
+    // See:
+    // - https://prettier.io/docs/en/install#eslint-and-other-linters
     //
-    // Must be placed last in the `extends` list. See:
-    // https://github.com/prettier/eslint-config-prettier#installation
+    // Must be placed last in the `extends` list.
+    // See:
+    // - https://github.com/prettier/eslint-config-prettier#installation
     "prettier"
-  ]
+  ],
+
+  // See:
+  // - https://eslint.org/docs/latest/use/configure/language-options#using-configuration-files-1
+  "globals": {
+    "React": "readonly"
+  }
 }

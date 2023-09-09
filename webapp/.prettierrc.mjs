@@ -2,5 +2,6 @@
 
 /** @type {import("prettier").Config} */
 export default {
-  //
+  // Personal preference
+  quoteProps: "consistent",
 };
