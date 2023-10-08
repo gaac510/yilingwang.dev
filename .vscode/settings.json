@@ -22,5 +22,8 @@
   },
   "editor.quickSuggestions": {
     "strings": "on"
-  }
+  },
+
+  // TOML for supabase config
+  "evenBetterToml.schema.enabled": false
 }
